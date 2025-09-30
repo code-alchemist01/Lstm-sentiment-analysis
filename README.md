@@ -32,6 +32,9 @@ Bu proje, LSTM (Long Short-Term Memory) sinir ağları kullanarak duygu analizi 
 - **İkili Sınıflandırma**: Pozitif/Negatif duygu analizi
 - **Güven Skoru**: Tahmin güvenilirlik oranı
 - **Detaylı Raporlama**: Kapsamlı analiz sonuçları
+<img width="1779" height="791" alt="Ekran görüntüsü 2025-10-01 023733" src="https://github.com/user-attachments/assets/f75d5d18-7a4f-4673-a0c0-63a080471a58" />
+<img width="1792" height="823" alt="Ekran görüntüsü 2025-10-01 023718" src="https://github.com/user-attachments/assets/cef07c64-6cc5-4646-b033-0ed0ac8a2037" />
+<img width="1864" height="791" alt="Ekran görüntüsü 2025-10-01 023659" src="https://github.com/user-attachments/assets/3c9bfd65-e2fd-423a-9bc3-e40e3f7c36f1" />
 
 ## 🚀 Kurulum
 
@@ -87,23 +90,6 @@ streamlit run app.py
 
 Uygulama `http://localhost:8501` adresinde çalışacaktır.
 
-### Programatik Kullanım
-```python
-import torch
-import pickle
-from train_simple import LSTMSentimentClassifier
-
-# Model ve vocabulary yükleme
-model = LSTMSentimentClassifier(vocab_size=10000, embedding_dim=128, hidden_dim=128)
-model.load_state_dict(torch.load('best_lstm_sentiment_model.pth'))
-
-with open('vocabulary.pkl', 'rb') as f:
-    vocab = pickle.load(f)
-
-# Duygu analizi
-text = "Bu film gerçekten harika!"
-# ... preprocessing ve tahmin kodu
-```
 
 ## 🏗️ Model Mimarisi
 
@@ -148,6 +134,8 @@ LSTMSentimentClassifier(
 - **Training Accuracy**: %91.13
 - **Epochs**: 5
 - **Training Time**: ~15 dakika (RTX 5060 8GB)
+<img width="1144" height="784" alt="Ekran görüntüsü 2025-10-01 022458" src="https://github.com/user-attachments/assets/28e8936a-ed57-4b96-b961-63909bc28b3b" />
+
 
 ### Performans Metrikleri
 - **Precision**: ~0.86
